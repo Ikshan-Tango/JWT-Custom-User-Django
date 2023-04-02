@@ -10,13 +10,13 @@ class CustomUser(AbstractBaseUser,PermissionsMixin):
     password=models.CharField(max_length=200)
 
     is_staff = models.BooleanField(default=False, verbose_name='Staff account is activated')
-    is_active = models.BooleanField(default=False, verbose_name='account is activated')
+    is_active = models.BooleanField(default=True, verbose_name='account is activated')
     is_admin = models.BooleanField(default=False, verbose_name='staff account')
 
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ('name',)
+    REQUIRED_FIELDS = ()
 
     # def create_superuser(self, email, password, **extra_fields):
     #     """

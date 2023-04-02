@@ -20,7 +20,7 @@ from rest_framework_simplejwt import views as jwt_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user',include('user.urls')),
+    path('user/',include('user.urls')),
 
 
     path('api/token/',
